@@ -33,6 +33,19 @@
 
   Alpine does not have bash installed, just sh.
 
+## Docker Networks Concepts for private and public Comms in containers
+
+-p (--publish) to assign port
+it is always HOST:CONTAINER format
+
+docker run --name nginx -p 8080:80 nginx
+
+docker container inspect --format "{{ .NetworkSettings.IPAddress }}" nginx
+
+- docker container port CONTAINER
+
+  Quick port check
+
 ## Docker Networks: CLI Management
 
 - docker network ls
