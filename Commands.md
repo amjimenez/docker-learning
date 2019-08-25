@@ -67,3 +67,19 @@ docker container inspect --format "{{ .NetworkSettings.IPAddress }}" nginx
 - docker network disconnect
 
   Detach a network from container
+
+### --network bridge
+
+Default Docker virtual network, which is NAT'ed behind the HOST IP.
+
+### --network host
+
+It gains performance by skipping virtual networks but sacrifices security of container model
+
+### --network none
+
+Removes eth0 and only leaves you with localhost interface in container
+
+- docker container run -d --name CONTAINER_NAME --network NETWORK_NAME IMAGE
+
+Runs container in a previously created network
