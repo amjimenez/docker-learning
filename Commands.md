@@ -1,18 +1,56 @@
 # Docker commands
 
-## docker container top
+## Containers
 
-Process list in one container
+- docker container top
 
-## docker container inspect
+  Process list in one container
 
-Show metadata about the container (startup, config, volumes, networking, etc.)
+- docker container inspect
 
-## docker container stats
+  Show metadata about the container (startup, config, volumes, networking, etc.)
 
-Shows container resource usage
+- docker container stats
 
-## docker container run -it
+  Shows container resource usage
 
--t pseudo-tty
-simulates a real terminal, like what SSH does
+- docker container run -it
+
+  -t pseudo-tty
+  simulates a real terminal, like what SSH does
+
+## Getting a Shell Inside Containers
+
+- docker container run -it
+
+  Start new container interactively
+
+- docker container exec -it
+
+  Run Additional command in existing container
+
+* Notes about Different Linux Distributions
+
+  Alpine does not have bash installed, just sh.
+
+## Docker Networks: CLI Management
+
+- docker network ls
+
+  Shows networks
+
+- docker network inspect
+
+  Inspect a network
+
+- docker network create --driver
+
+  Create a network
+
+- docker network connect
+
+  Attach a network to container
+
+- docker network disconnect
+
+  Detach a network from container
